@@ -10,7 +10,7 @@ import Blog from './pages/Blog';
 import Careers from './pages/Careers';
 
 import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Signup from './pages/SignUp';
 
 function App() {
   return (
