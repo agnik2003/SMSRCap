@@ -48,7 +48,7 @@ export default function Careers() {
     setStatus({ loading: true, error: null, success: false });
 
     try {
-      const response = await fetch('http://localhost:5000/api/careers/apply', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/careers/apply`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

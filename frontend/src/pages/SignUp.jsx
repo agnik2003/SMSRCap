@@ -22,7 +22,7 @@ export default function Signup() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/signup', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: formData.name, email: formData.email, password: formData.password })
@@ -45,7 +45,7 @@ export default function Signup() {
     setStatus({ loading: true, error: null, success: null });
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/verify-otp', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, otp })
